@@ -1,0 +1,23 @@
+---
+title: "Notes for Intro to Shiny Lecture"
+author: "Joel Herndon"
+date: "9/19/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+When should I use Shiny?
+
+[Dean Attali](https://community.rstudio.com/t/discussion-when-is-shiny-a-good-choice-vs-when-is-it-not-the-right-tool-for-the-job/707) - 
+
+"To get the ball rolling, I’m going to be lazy and just copy-paste a response of mine from an old thread3:
+
+Obviously there are many factors to consider. I’d say Shiny is particularly great for fast prototyping and fairly easy to use for someone who’s not a programmer. Java, for example, is not very friendly for people who are not programmers, and it takes longer to develop a simple GUI app.
+
+Shiny is also great for dashboards, where you have some data (such as in a database or a file) and you want to show have a page where you show all sorts of metrics in an interactive way. The availability of many different charting libraries is also a big plus.
+
+The one thing shiny is perhaps not great at is multi-page apps. When I say mutipage apps I don’t mean multitab, I mean truly multipage, in the sense that when you click on a link it takes you to c completely new page that makes a new HTTP request and loads new resources and acts as an independent page.
+
+The language that your current analysis code is written in is also an important consideration."
