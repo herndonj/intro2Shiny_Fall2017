@@ -1,0 +1,38 @@
+---
+title: "Developing Interactive Websites with Shiny"
+author: "Joel Herndon"
+date: "10/19/2017"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+##I. Working with the user interface (ui)
+
+Let’s say we wanted to add to add a **Select Box** that will change the color of our bars on the graph.
+
+  1. Which code would we use?  Tip: See the [Shiny Widget Gallery - http://shiny.rstudio.com/gallery/widget-gallery.html](http://shiny.rstudio.com/gallery/widget-gallery.html)
+
+
+  2. Where would we place the code (between which two elements in the ui)?
+
+
+Give it a try and see if you can add this to your interface. (***tip***: place a comma after the code you receive from the link above.
+
+
+##II. Working with the server (server)
+
+We have our `select box` for choosing colors.
+
+  1.   In the server section of the code, what do we need to add to make the bars change color? (***hint*** – `col` controls the bar color in the `histogram` command. Try making the bars blue or grey.)
+
+Suppose we want to add a new scatterplot below the histogram that compares the relationship between the waiting time between geyser eruptions and the duration of the eruption.
+
+  2. What do I need to add to the server to make this calculation and send it to the user?
+  3. How do I make the calculation in the previous step appear in the ui?
+  4. ***Optional*** – Is there a way to have the slider control both the histogram and the number of points plotted.
+
