@@ -1,0 +1,73 @@
+---
+title: "Comparing 'Regular R' to Shiny R"
+author: "Joel Herndon"
+date: "10/13/2017"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#First, 'Regular R'
+
+## Old Faithful Geyser Data
+
+The following code uses the built-in R dataset of Old Faithful Geyser Data to create a histogram of the waiting time until the next eruption. If we want to change the number of bins, you'll need to edit this code and run the file again
+
+*If you don't use histograms often, we're basically telling R to load (a vector) of waiting times, calculate a set of bins to use for counting where the observations fall using the minimum observation, the maximum observation, and then the number of bins we want (31 in this case).  The next line creates a histogram using the data, our set of bins, and some styling.  If we want to change the number of bins, you'll need to edit this code and run the file again.*
+
+```{r}
+x  <- faithful$waiting #load vector of waiting times
+bins <- seq(min(x), max(x), length.out = 31)
+
+# 
+hist(x, breaks = bins, col = 'darkgray', border = 'white')
+```
+
+
+# Old Faithful Geyser Data with Shiny
+
+```{r, echo=TRUE}
+library(shiny)
+shinyApp(
+  
+    ui <- fluidPage(
+   
+        # Application title
+            titlePanel("Old Faithful Geyser Data"),
+   
+        # Sidebar with a slider input for number of bins 
+            sidebarLayout(
+                sidebarPanel(
+                    sliderInput("bins",
+                     "Number of bins:",
+                     min = 1,
+                     max = 50,
+                     value = 30)
+                ),
+      
+      # Show a plot of the generated distribution
+                mainPanel(
+                     plotOutput("distPlot")
+                )
+   )
+), 
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+   
+   output$distPlot <- renderPlot({
+      # generate bins based on input$bins from ui.R
+      x    <- faithful[, 2] 
+      bins <- seq(min(x), max(x), length.out = input$bins + 1)
+      
+      # draw the histogram with the specified number of bins
+      hist(x, breaks = bins, col = 'darkgray', border = 'white')
+   })
+},
+options = list(height = 500)
+)
+
+```
