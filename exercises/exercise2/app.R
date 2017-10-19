@@ -28,7 +28,8 @@ ui <- fluidPage(
                     choices = list("Blue" = "blue", "Grey" = "grey"), selected = "blue")),
         # Show a plot of the generated distribution
         mainPanel(
-            plotOutput("distPlot")
+            plotOutput("distPlot")#,
+            #plotOutput("<name>")
         )
     )
 )
@@ -46,7 +47,9 @@ server <- function(input, output) {
         hist(x, breaks = bins, col = input$select, border = 'white')
         
     })
-
+    #    output$<name> <- renderPlot({
+    #        ggplot(faithful[1:input$<name>,], aes(x = eruptions, y = waiting)) + geom_point()
+    #    })
 }
 
 # Run the application 
