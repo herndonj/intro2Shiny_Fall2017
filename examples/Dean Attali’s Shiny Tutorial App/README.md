@@ -1,1 +1,0 @@
-This is Dean Attali's tutorial on using Shiny.
