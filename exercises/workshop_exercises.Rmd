@@ -3,9 +3,9 @@ title: "Developing Interactive Websites with Shiny"
 author: "Joel Herndon"
 date: "10/19/2017"
 output:
-  word_document: default
-  pdf_document: default
   html_document: default
+  pdf_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -32,7 +32,7 @@ We have our `select box` for choosing colors.
 
 Suppose we want to add a new scatterplot below the histogram that compares the relationship between the waiting time between geyser eruptions and the duration of the eruption.
 
-  2. What do I need to add to the server to make this calculation and send it to the user?
-  3. How do I make the calculation in the previous step appear in the ui?
+  2. What do I need to add to the server to make this plot and send it to the user?
+  3. How do I make the plot from the previous step appear in the ui?
   4. ***Optional*** – Is there a way to have the slider control both the histogram and the number of points plotted.
 
