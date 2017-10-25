@@ -1,10 +1,10 @@
 # Developing Interactive Websites with R and Shiny (Fall 2017)
 
-This repository contains the workshop materials for the [Data and Visualization Services Workshop](rfun.library.duke.edu) on Developing Interactive Websites with R and Shiny.  The course description and excersises follow.
+This repository contains the workshop materials for the [Data and Visualization Services Workshop](rfun.library.duke.edu) on Developing Interactive Websites with R and Shiny. The course description and excersises follow.
 
 ## Description
 
-Learn how to leverage your knowledge of R (and RMarkdown) to create compelling, interactive website and interactive documents using the Shiny web application framework.  Shiny makes it easy to transition from desktop based analysis and visualizations to interactive websites without (necessarily) having to learn HTML, CSS, and javascript.  This workshop provides an overview of the shiny framework along with examples and exercises designed to build confidence in developing shiny based websites.  
+Learn how to leverage your knowledge of R (and RMarkdown) to create compelling, interactive website and interactive documents using the Shiny web application framework. Shiny makes it easy to transition from desktop based analysis and visualizations to interactive websites without (necessarily) having to learn HTML, CSS, and javascript. This workshop provides an overview of the shiny framework along with examples and exercises designed to build confidence in developing shiny based websites.  
 
 ### Prerequisites and Requirements
 
@@ -17,7 +17,7 @@ Please let the instructor know in advance if you have concerns about prerequisit
 
 ## Exercises
 
-Our exercises for the workshop are based on the built-in shiny example (time between eruptions of Old Faithful geyser). While we will look at more complex (and possibly more interesting!) examples in the workshop, using the built-in example is helpful in that it is 1.) short (less chance of getting confused in a long piece of code) and 2.) focuses on a core shiny use case.
+Our exercises for the workshop are based on the built-in shiny example (time between eruptions of Old Faithful geyser). While we will look at more complex (and possibly more interesting!) examples in the workshop, using the built-in example is helpful in that it is concise and illustrates the core concepts involved in Shiny development.
 
 
 ## Resources
